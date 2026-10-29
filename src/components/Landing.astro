@@ -1,0 +1,138 @@
+---
+import img_1 from '../assets/img_1.png'
+import img_2 from '../assets/img_2.png'
+import img_3 from '../assets/img_3.png'
+import texture from '../assets/texture.jpg'
+import { Image } from 'astro:assets';
+import "@fontsource/instrument-serif";
+import "@fontsource/inter";
+---
+
+<div class="navbar">
+        <div class="navbar-cont">
+        <h2>Jacob M.</h2>
+        <h3>SITE UNDER CONSTRUCTION!!!</h3>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Skills</a></li>
+            <li><a href="">Contacts</a></li>
+        </ul>
+        </div>
+    </div>
+
+    <main>
+        <div class="sections">
+            <div class="section-1">
+                <div class="section-1-wrap">
+                    <div class="left-half">
+                        <div class="intro-1">
+                            <span id="hi"><b>Hi!</b></span>
+                            <span><b>I'm</b></span>
+                        </div>
+                        <div class="something-burger">
+                            <span id="name">Jacob</span>
+                            <div class="rect"><Image src={texture} loading="eager" alt="texture" class="texture"/></div>
+                            <div class="skills">
+                                <p style="text-align: left;">Web Dev</p>
+                                <p style="text-align: right;">Photographer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-half">
+                        <Image src={img_1} loading="eager" alt="kid me" style="margin-top: 100px;"/>
+                        <Image src={img_2} loading="eager" alt="me"/>
+                        <Image src={img_3} loading="eager" alt="kid me" style="margin-top: 100px;"/>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+<style>
+    h1, h2, h3, p, ul {
+        font-family: Inter; 
+    }
+    a {
+        text-decoration: none;
+        color:#000000;
+    }
+
+    .navbar{
+        width: 100%;
+        height: 85px;
+        
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar-cont {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 24px;
+    }
+    .navbar-cont > ul {
+        width: 400px;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+    }
+    .active {
+        text-decoration: underline;
+    }
+    .intro-1 {
+        display: flex; gap: 30px; font-size: 86px; font-family: Inter; 
+    }
+    .something-burger {
+        margin-left: 120px;
+    }
+    #name {
+        font-family: 'Instrument Serif', serif;
+        font-size: 12rem;
+    }
+    #hi {
+        color: #006177;
+    }
+    .section-1 {
+        display: flex;
+        justify-content: center;
+    }
+    .section-1-wrap {
+        width: 95%;
+        margin-top: 75px;
+        display: flex;
+    }
+    .left-half {
+        flex: 4;
+    }
+    .rect {
+        width: 100%;
+        height: 300px;
+        background-color: #006177;
+        margin-top: -110px;
+    }
+    .texture {
+        mix-blend-mode: multiply;
+        width: 100%;
+        height: 100%;
+    }
+    .skills {
+        display: flex;
+        justify-content: space-between;
+        font-size: 30px;
+        border-bottom: 2px solid #000000;
+    }
+    .right-half {
+        flex: 6;
+        margin-left: 100px;
+
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    .right-half > img {
+        height: 550px;
+        width: 250px;
+    }
+</style>

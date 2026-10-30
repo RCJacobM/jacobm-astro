@@ -6,6 +6,7 @@ import texture from '../assets/texture.jpg'
 import { Image } from 'astro:assets';
 import "@fontsource/instrument-serif";
 import "@fontsource/inter";
+import "@fontsource/inter/700.css"; 
 ---
 
 <div class="navbar">
@@ -39,7 +40,7 @@ import "@fontsource/inter";
                         </div>
                     </div>
                     <div class="right-half">
-                        <Image src={img_1} loading="eager" alt="kid me" style="margin-top: 100px;"/>
+                        <Image id="img1" src={img_1} loading="eager" alt="kid me" style="margin-top: 100px;"/>
                         <Image src={img_2} loading="eager" alt="me"/>
                         <Image src={img_3} loading="eager" alt="kid me" style="margin-top: 100px;"/>
 
@@ -67,7 +68,7 @@ import "@fontsource/inter";
     }
 
     .navbar-cont {
-        width: 95%;
+        width: 85%;
         display: flex;
         justify-content: space-between;
         font-size: 24px;
@@ -81,34 +82,36 @@ import "@fontsource/inter";
     .active {
         text-decoration: underline;
     }
-    .intro-1 {
-        display: flex; gap: 30px; font-size: 86px; font-family: Inter; 
-    }
-    .something-burger {
-        margin-left: 120px;
-    }
-    #name {
-        font-family: 'Instrument Serif', serif;
-        font-size: 12rem;
-    }
-    #hi {
-        color: #006177;
-    }
     .section-1 {
         display: flex;
         justify-content: center;
     }
     .section-1-wrap {
-        width: 95%;
+        width: 85%;
         margin-top: 75px;
         display: flex;
     }
     .left-half {
         flex: 4;
     }
+    .intro-1 {
+        display: flex; gap: 30px; font-size: 86px; font-family: Inter; 
+        font-weight: 700;
+    }
+    .something-burger {
+        margin-left: 50px;
+        margin-top: -30px;
+    }
+    #hi {
+        color: #006177;
+    }
+    #name {
+        font-family: 'Instrument Serif', serif;
+        font-size: 12rem;
+    }
     .rect {
         width: 100%;
-        height: 300px;
+        height: 330px;
         background-color: #006177;
         margin-top: -110px;
     }

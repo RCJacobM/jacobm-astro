@@ -12,7 +12,6 @@ import "@fontsource/inter/700.css";
 <div class="navbar">
         <div class="navbar-cont">
         <h2>Jacob M.</h2>
-        <h3>SITE UNDER CONSTRUCTION!!!</h3>
         <ul>
             <li><a href="">Home</a></li>
             <li><a href="">Skills</a></li>
@@ -25,7 +24,7 @@ import "@fontsource/inter/700.css";
         <div class="sections">
             <div class="section-1">
                 <div class="section-1-wrap">
-                    <div class="left-half">
+                    <div class="section-1-1">
                         <div class="intro-1">
                             <span id="hi"><b>Hi!</b></span>
                             <span><b>I'm</b></span>
@@ -39,103 +38,12 @@ import "@fontsource/inter/700.css";
                             </div>
                         </div>
                     </div>
-                    <div class="right-half">
-                        <Image id="img1" src={img_1} loading="eager" alt="kid me" style="margin-top: 100px;"/>
-                        <Image src={img_2} loading="eager" alt="me"/>
-                        <Image src={img_3} loading="eager" alt="kid me" style="margin-top: 100px;"/>
-
+                    <div class="section-1-2">
+                        <Image class="side-img" src={img_1} loading="eager" alt="kid me"/>
+                        <Image class="main-img"src={img_2} loading="eager" alt="me"/>
+                        <Image class="side-img" src={img_3} loading="eager" alt="kid me"/>
                     </div>
                 </div>
             </div>
         </div>
-
     </main>
-<style>
-    h1, h2, h3, p, ul {
-        font-family: Inter; 
-    }
-    a {
-        text-decoration: none;
-        color:#000000;
-    }
-
-    .navbar{
-        width: 100%;
-        height: 85px;
-        
-        display: flex;
-        justify-content: center;
-    }
-
-    .navbar-cont {
-        width: 85%;
-        display: flex;
-        justify-content: space-between;
-        font-size: 24px;
-    }
-    .navbar-cont > ul {
-        width: 400px;
-        display: flex;
-        justify-content: space-between;
-        list-style-type: none;
-    }
-    .active {
-        text-decoration: underline;
-    }
-    .section-1 {
-        display: flex;
-        justify-content: center;
-    }
-    .section-1-wrap {
-        width: 85%;
-        margin-top: 75px;
-        display: flex;
-    }
-    .left-half {
-        flex: 4;
-    }
-    .intro-1 {
-        display: flex; gap: 30px; font-size: 86px; font-family: Inter; 
-        font-weight: 700;
-    }
-    .something-burger {
-        margin-left: 50px;
-        margin-top: -30px;
-    }
-    #hi {
-        color: #006177;
-    }
-    #name {
-        font-family: 'Instrument Serif', serif;
-        font-size: 12rem;
-    }
-    .rect {
-        width: 100%;
-        height: 330px;
-        background-color: #006177;
-        margin-top: -110px;
-    }
-    .texture {
-        mix-blend-mode: multiply;
-        width: 100%;
-        height: 100%;
-    }
-    .skills {
-        display: flex;
-        justify-content: space-between;
-        font-size: 30px;
-        border-bottom: 2px solid #000000;
-    }
-    .right-half {
-        flex: 6;
-        margin-left: 100px;
-
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
-    .right-half > img {
-        height: 550px;
-        width: 250px;
-    }
-</style>

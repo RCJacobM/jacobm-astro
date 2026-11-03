@@ -55,6 +55,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 .sections > * {
     display: flex;
@@ -63,7 +64,7 @@ body {
 }
 .section-1 {
     justify-content: center;
-    margin: 75px 0 170px 0;
+    margin: 75px 0 210px 0;
     gap: 100px;
 
 }
@@ -121,20 +122,18 @@ body {
  
 .section-2 {
     display: flex;
-    width: 80%;
-    margin-bottom: 100px;
+    padding: 0 10%;
 }
 .section-2-1 {
-    flex: 4;
-}
-.section-2-2 {
-    flex: 6;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    margin-bottom: 100px;
+
 }
-.section-2-2 > img {
-    width: 83%;
+.text {
+    margin-right: 120px;
+}
+.section-2-1 > img {
+    width: 40%;
     height: auto;
 }
 
@@ -149,19 +148,26 @@ body {
         flex-direction: column;
     }
     .section-1 {
-        margin-top: 25px;
-        gap: 40px;
+        margin-top: 0px;
+        margin-bottom: 50px;
+        gap: 30px;
     }
     .something-burger {
         margin-left: 0px;
         margin-top: 0px;
     }
     .rect {
-        height: 150px;
+        height: 130px;
         margin-top: -60px;
     }
-    .section-2-2 {
-        justify-content: center;
+    .section-2-1 {
+        flex-direction: column;
+    }
+    .text {
+        margin: 0;
+    }
+    .section-2-1 > img {
+        width: 100%;
     }
 }
 @media (max-width: 768px) {

@@ -14,7 +14,7 @@ import "@fontsource/inter/700.css";
         <h2>Jacob M.</h2>
         <ul>
             <li><a href="">Home</a></li>
-            <li><a href="">Skills</a></li>
+            <li><a href="#skills-section">Skills</a></li>
             <li><a href="">Contacts</a></li>
         </ul>
     </div>
@@ -42,13 +42,17 @@ import "@fontsource/inter/700.css";
                     <Image class="side-img" src={img_3} loading="eager" alt="kid me"/>
                 </div>
             </div>
-            <div class="section-2">
+            <div class="section-2" id="skills-section">
                     <div class="section-2-1">
-                        <h1 class="xl-title">Skills</h1>
-                        <h2>Photography</h2>
-                        <p>Two years of capturing expression and meaning through the medium of photography. What started off as youth ministry&mdash;became my lifelong endeavor.</p>
+                        <div class="text">
+                            <h1 class="xl-title">Skills</h1>
+                            <h2>Photography</h2>
+                            <p>Two years of capturing expression and meaning through the medium of photography. What started off as youth ministry&mdash;became my lifelong endeavor.</p>
+                        </div>
+                        <Image src={photograph} loading="eager" alt="photograph by me"/>
                     </div>
-                    <div class="section-2-2">                    <Image src={photograph} loading="eager" alt="photograph by me"/></div>
+
+                    <div class="section-2-2">                    </div>
             </div>
         </div>
     </main>

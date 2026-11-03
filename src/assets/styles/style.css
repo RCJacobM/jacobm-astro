@@ -1,27 +1,37 @@
-h1, h2, h3, h4, h5, h6, p, ul {
+:root {
+    --step-hero-0: clamp(2.65rem, 1.208rem + 4.63vw, 5.375rem); 
+    --step-hero-1: clamp(6.5rem, 2rem + 11.11vw, 12rem);   
+    --sub: 22px;
+
+    --color-primary: #006177;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+}
+h1, h2, h3, h4, h5, h6, p, ul, span {
     font-family: Inter; 
 }
 a {
     text-decoration: none;
     color:#000000;
 }
-
-.navbar{
-    width: 100%;
-    height: 85px;
-    
+body {
     display: flex;
     justify-content: center;
 }
-
-.navbar-cont {
+.wrapper {
     width: 85%;
+}
+.navbar{
+    width: 100%;
+    height: 80px;
+    
     display: flex;
     justify-content: space-between;
-    font-size: 22px;
+    align-items: center;
+
 }
-.navbar-cont > ul {
-    width: 25%;
+.navbar > ul {
+    width: 20%;
     display: flex;
     justify-content: space-between;
     list-style-type: none;
@@ -29,25 +39,27 @@ a {
 .active {
     text-decoration: underline;
 }
+
 .section-1 {
     display: flex;
     justify-content: center;
-}
-.section-1-wrap {
-    width: 85%;
     margin-top: 75px;
-    display: flex;
-    gap: 100px
+    gap: 100px;
+
 }
 .section-1-1 {
     flex: 4;
 }
 .intro-1 {
-    display: flex; gap: 30px; font-size: 86px; font-family: Inter; 
+    display: flex;
+    font-size: var(--step-hero-0); 
     font-weight: 700;
 }
+.intro-1 > h4 {
+    margin: 0;
+}
 #hi {
-    color: #006177;
+    color: var(--color-primary);
 }
 .something-burger {
     margin-left: 50px;
@@ -55,12 +67,12 @@ a {
 }
 #name {
     font-family: 'Instrument Serif', serif;
-    font-size: 12rem;
+    font-size: var(--step-hero-1);
 }
 .rect {
     width: 100%;
     height: 340px;
-    background-color: #006177;
+    background-color: var(--color-primary);
     margin-top: -110px;
 }
 .texture {
@@ -71,14 +83,15 @@ a {
 .skills {
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid #000000;
+    border-bottom: 2px solid var(--color-black);
+    font-size: var(--sub);
 }
 .section-1-2 {
     flex: 6;
     display: flex;
     justify-content: center;
-    gap: 15px;
     align-items: center;
+    gap: 15px;
 }
 .section-1-2 > .main-img {
     width: 36%;
@@ -90,28 +103,20 @@ a {
 }
 
 @media (max-width: 1300px) {
-    .navbar-cont {
+    .wrapper {
         width: 90%;
-        font-size: 20px;
     }
-    .navbar-cont > ul {
+    .navbar > ul {
         width: 40%;
     }
-    .section-1-wrap {
+    .sections > * {
         flex-direction: column;
-        width: 90%;
+    }
+    .section-1 {
         margin-top: 25px;
         gap: 40px;
     }
-    #name {
-        font-size: 6rem;
-    }
-    .intro-1 {
-        gap: 20px;
-        font-size: 42px;
-    }
     .something-burger {
-        /* height: 20; */
         margin-left: 0px;
         margin-top: 0px;
     }
@@ -119,14 +124,9 @@ a {
         height: 150px;
         margin-top: -60px;
     }
-    /* .section-1-2 > img {
-        width: 100%;
-        aspect-ratio: 1/ 2.20;
-        object-fit: cover;
-    } */
 }
 @media (max-width: 768px) {
-    .navbar-cont > ul {
+    .navbar > ul {
         display: none;
     }
 }

@@ -8,42 +8,41 @@ import "@fontsource/instrument-serif";
 import "@fontsource/inter";
 import "@fontsource/inter/700.css"; 
 ---
-
-<div class="navbar">
-        <div class="navbar-cont">
+<div class="wrapper">
+    <div class="navbar">
         <h2>Jacob M.</h2>
         <ul>
             <li><a href="">Home</a></li>
             <li><a href="">Skills</a></li>
             <li><a href="">Contacts</a></li>
         </ul>
-        </div>
     </div>
 
     <main>
         <div class="sections">
-            <div class="section-1">
-                <div class="section-1-wrap">
-                    <div class="section-1-1">
-                        <div class="intro-1">
-                            <span id="hi"><b>Hi!</b></span>
-                            <span><b>I'm</b></span>
-                        </div>
-                        <div class="something-burger">
-                            <span id="name">Jacob</span>
-                            <div class="rect"><Image src={texture} loading="eager" alt="texture" class="texture"/></div>
-                            <div class="skills">
-                                <p style="text-align: left;">Web Dev</p>
-                                <p style="text-align: right;">Photographer</p>
-                            </div>
-                        </div>
+            <div class="section-1" style="display: flex;">
+
+                <div class="section-1-1">
+                    <div class="intro-1">
+                        <h4 id="hi"><b>Hi!&nbsp;</b></h4>
+                        <h4><b>I'm</b></h4>
                     </div>
-                    <div class="section-1-2">
-                        <Image class="side-img" src={img_1} loading="eager" alt="kid me"/>
-                        <Image class="main-img"src={img_2} loading="eager" alt="me"/>
-                        <Image class="side-img" src={img_3} loading="eager" alt="kid me"/>
+                    <div class="something-burger">
+                        <span id="name">Jacob</span>
+                        <div class="rect"><Image src={texture} loading="eager" alt="texture" class="texture"/></div>
+                        <div class="skills">
+                            <p style="text-align: left;">Web Dev</p>
+                            <p style="text-align: right;">Photographer</p>
+                        </div>
                     </div>
                 </div>
+                <div class="section-1-2">
+                    <Image class="side-img" src={img_1} loading="eager" alt="kid me"/>
+                    <Image class="main-img"src={img_2} loading="eager" alt="me"/>
+                    <Image class="side-img" src={img_3} loading="eager" alt="kid me"/>
+                </div>
+
             </div>
         </div>
     </main>
+</div>

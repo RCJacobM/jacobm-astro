@@ -3,6 +3,7 @@ import img_1 from '../assets/img_1.png'
 import img_2 from '../assets/img_2.png'
 import img_3 from '../assets/img_3.png'
 import texture from '../assets/texture.jpg'
+import photograph from '../assets/photograph_1.jpg'
 import { Image } from 'astro:assets';
 import "@fontsource/instrument-serif";
 import "@fontsource/inter";
@@ -42,7 +43,12 @@ import "@fontsource/inter/700.css";
                 </div>
             </div>
             <div class="section-2">
-
+                    <div class="section-2-1">
+                        <h1 class="xl-title">Skills</h1>
+                        <h2>Photography</h2>
+                        <p>Two years of capturing expression and meaning through the medium of photography. What started off as youth ministry&mdash;became my lifelong endeavor.</p>
+                    </div>
+                    <div class="section-2-2">                    <Image src={photograph} loading="eager" alt="photograph by me"/></div>
             </div>
         </div>
     </main>

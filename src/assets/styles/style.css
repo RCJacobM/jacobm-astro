@@ -1,14 +1,27 @@
 :root {
     --step-hero-0: clamp(2.65rem, 1.208rem + 4.63vw, 5.375rem); 
     --step-hero-1: clamp(6.5rem, 2rem + 11.11vw, 12rem);   
+    --main: clamp(4rem, 2.667rem + 5.926vw, 8rem);
     --sub: 22px;
+    --body: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
 
     --color-primary: #006177;
     --color-white: #FFFFFF;
     --color-black: #000000;
 }
-h1, h2, h3, h4, h5, h6, p, ul, span {
+h2, h3, h4, h5, h6, p, ul, span {
     font-family: Inter; 
+}
+h1,h2,h3,h4,h5, h6 {
+    margin: 0;
+}
+p, a, ul {
+    font-size: var(--body);
+}
+.xl-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: var(--main);
+    font-weight: 100;
 }
 a {
     text-decoration: none;
@@ -28,7 +41,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 .navbar > ul {
     width: 20%;
@@ -39,14 +51,19 @@ body {
 .active {
     text-decoration: underline;
 }
+.sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .sections > * {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 .section-1 {
-    display: flex;
     justify-content: center;
-    margin-top: 75px;
+    margin: 75px 0 170px 0;
     gap: 100px;
 
 }
@@ -57,9 +74,6 @@ body {
     display: flex;
     font-size: var(--step-hero-0); 
     font-weight: 700;
-}
-.intro-1 > h4 {
-    margin: 0;
 }
 #hi {
     color: var(--color-primary);
@@ -104,6 +118,25 @@ body {
     width: 24%;
     height: auto;
 }
+ 
+.section-2 {
+    display: flex;
+    width: 80%;
+    margin-bottom: 100px;
+}
+.section-2-1 {
+    flex: 4;
+}
+.section-2-2 {
+    flex: 6;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.section-2-2 > img {
+    width: 83%;
+    height: auto;
+}
 
 @media (max-width: 1300px) {
     .wrapper {
@@ -126,6 +159,9 @@ body {
     .rect {
         height: 150px;
         margin-top: -60px;
+    }
+    .section-2-2 {
+        justify-content: center;
     }
 }
 @media (max-width: 768px) {

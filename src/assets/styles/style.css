@@ -39,7 +39,10 @@ body {
 .active {
     text-decoration: underline;
 }
-
+.sections > * {
+    display: flex;
+    flex-direction: row;
+}
 .section-1 {
     display: flex;
     justify-content: center;
@@ -94,11 +97,11 @@ body {
     gap: 15px;
 }
 .section-1-2 > .main-img {
-    width: 36%;
+    width: 30%;
     height: auto;
 }
 .section-1-2 > .side-img {
-    width: 30%;
+    width: 24%;
     height: auto;
 }
 

@@ -211,7 +211,6 @@ body {
         position: relative;
         z-index: 1002; 
     }
-
     .navbar-menu {
         position: fixed;
         top: 0;

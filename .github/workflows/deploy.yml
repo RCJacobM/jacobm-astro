@@ -13,8 +13,8 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.KEY }}
           script: |
-            cd ~/prod/websites/jacobm
+            cd ~/prod/websites/jacobm-astro
             git pull origin main
             cd ..
-            docker compose up -d --build jacobm
+            docker compose up -d --build jacobm-astro
             docker image prune -f

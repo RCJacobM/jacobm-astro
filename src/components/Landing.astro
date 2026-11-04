@@ -10,17 +10,24 @@ import "@fontsource/inter";
 import "@fontsource/inter/700.css"; 
 ---
 <div class="wrapper">
-    <div class="navbar">
+    <nav class="navbar"> <!-- navbar -->
         <h2>Jacob M.</h2>
-        <ul>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" style="display: none;">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul class="navbar-menu">
             <li><a href="">Home</a></li>
             <li><a href="#skills-section">Skills</a></li>
             <li><a href="">Contacts</a></li>
         </ul>
-    </div>
-
+    </nav>
+    <!--  -->
     <main>
         <div class="sections">
+            <!-- first page -->
             <div class="section-1">
                 <div class="section-1-1">
                     <div class="intro-1">
@@ -42,6 +49,7 @@ import "@fontsource/inter/700.css";
                     <Image class="side-img" src={img_3} loading="eager" alt="kid me"/>
                 </div>
             </div>
+            <!-- second page  -->
             <div class="section-2" id="skills-section">
                     <div class="section-2-1">
                         <div class="text">

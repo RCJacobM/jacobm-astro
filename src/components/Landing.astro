@@ -9,20 +9,23 @@ import "@fontsource/instrument-serif";
 import "@fontsource/inter";
 import "@fontsource/inter/700.css"; 
 ---
-<div class="wrapper">
-    <nav class="navbar"> <!-- navbar -->
-        <h2>Jacob M.</h2>
-        <input type="checkbox" id="menu-toggle" class="menu-toggle" style="display: none;">
-        <label for="menu-toggle" class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-        <ul class="navbar-menu">
-            <li><a href="">Home</a></li>
-            <li><a href="#skills-section">Skills</a></li>
-            <li><a href="">Contacts</a></li>
-        </ul>
+<div class="wrapper" id="home-section-redirect">
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <h2>Jacob M.</h2>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" style="display: none;">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="navbar-menu">
+                <li><a href="#home-section-redirect">Home</a></li>
+                <li><a href="#skills-section-redirect">Skills</a></li>
+                <li><a href="">Contacts</a></li>
+            </ul>
+        </div>
     </nav>
     <!--  -->
     <main>
@@ -50,17 +53,19 @@ import "@fontsource/inter/700.css";
                 </div>
             </div>
             <!-- second page  -->
-            <div class="section-2" id="skills-section">
+            <div class="section-2" id="skills-section-redirect">
                     <div class="section-2-1">
                         <div class="text">
                             <h1 class="xl-title">Skills</h1>
                             <h2>Photography</h2>
                             <p>Two years of capturing expression and meaning through the medium of photography. What started off as youth ministry&mdash;became my lifelong endeavor.</p>
                         </div>
-                        <Image src={photograph} loading="eager" alt="photograph by me"/>
+                        <div class="partition"></div>
+                        <Image src={photograph} loading="lazy" alt="photograph by me"/>
                     </div>
 
-                    <div class="section-2-2">                    </div>
+                    <div class="section-2-2">
+                    </div>
             </div>
         </div>
     </main>

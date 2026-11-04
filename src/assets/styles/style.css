@@ -8,6 +8,20 @@
     --color-primary: #006177;
     --color-white: #FFFFFF;
     --color-black: #000000;
+
+    --content-width: 85%;
+    --navbar-menu-width: 20%;
+    --sections-direction: row;
+    --profile-main-img: 30%;
+    --profile-side-img: 24%;
+    --section-1-margins: 75px 0 210px 0;
+    --section-1-gap: 100px;
+    --something-burger-margins: -40px 0 0 50px;
+    --rect-height: 340px;
+    --rect-margin-top: -110px;
+    --section-2-padding: 0 10%;
+    --text-side-width: 30%;
+    --image-side-width: 40%;
 }
 h2, h3, h4, h5, h6, p, ul, span {
     font-family: Inter; 
@@ -27,25 +41,12 @@ a {
     text-decoration: none;
     color:#000000;
 }
-/* reset */
-/* button {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-} */
-/* ================ */
-
-body {
-    display: flex;
-    justify-content: center;
+main {
+    width: var(--content-width);
+    margin: 0 auto;
 }
-
 .wrapper {
-    width: 85%;
+    width: 100%;
 }
 /* Navigation Bar */
  .hamburger {
@@ -59,18 +60,23 @@ body {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .navbar {
-    position: sticky; 
+    position: sticky;
     top: 0;
     width: 100%;
     height: 80px;
+    z-index: 1000;
+    background-color: var(--color-white, #fff);
+}
+.navbar-container {
+    width: var(--content-width);
+    height: 100%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
-    background-color: var(--color-white, #fff); 
 }
 .navbar-menu {
-    width: 20%;
+    width: var(--navbar-menu-width);
     display: flex;
     justify-content: space-between;
     list-style-type: none;
@@ -89,7 +95,7 @@ body {
 }
 .sections > * {
     display: flex;
-    flex-direction: row;
+    flex-direction: var(--sections-direction);
     justify-content: center;
 }
 /* ================ */
@@ -97,8 +103,8 @@ body {
 /* Section 1  */
 .section-1 {
     justify-content: center;
-    margin: 75px 0 210px 0;
-    gap: 100px;
+    margin: var(--section-1-margins);
+    gap: var(--section-1-gap);
 
 }
 .section-1-1 {
@@ -113,8 +119,7 @@ body {
     color: var(--color-primary);
 }
 .something-burger {
-    margin-left: 50px;
-    margin-top: -40px;
+    margin: var(--something-burger-margins);
 }
 #name {
     font-family: 'Instrument Serif', serif;
@@ -122,9 +127,9 @@ body {
 }
 .rect {
     width: 100%;
-    height: 340px;
+    height: var(--rect-height);
+    margin-top: var(--rect-margin-top);
     background-color: var(--color-primary);
-    margin-top: -110px;
 }
 .texture {
     mix-blend-mode: multiply;
@@ -144,62 +149,51 @@ body {
     align-items: center;
     gap: 15px;
 }
-.section-1-2 > .main-img {
-    width: 30%;
+.section-1-2 > img {
     height: auto;
 }
+.section-1-2 > .main-img {
+    width: var(--profile-main-img);
+}
 .section-1-2 > .side-img {
-    width: 24%;
-    height: auto;
+    width: var(--profile-side-img);
 }
  /* ================ */
 .section-2 {
     display: flex;
-    padding: 0 10%;
+    padding: var(--section-2-padding);
 }
 .section-2-1 {
     display: flex;
+    flex-direction: var(--sections-direction);
     margin-bottom: 100px;
 }
 .text {
-    margin-right: 120px;
+    width: var(--text-side-width);
+}
+.partition {
+    width: 30%;
 }
 .section-2-1 > img {
-    width: 40%;
+    width: var(--image-side-width);
     height: auto;
 }
 
 @media (max-width: 1300px) {
-    .wrapper {
-        width: 90%;
-    }
-    .navbar > ul {
-        width: 40%;
-    }
-    .sections > * {
-        flex-direction: column;
-    }
-    .section-1 {
-        margin-top: 0px;
-        margin-bottom: 50px;
-        gap: 30px;
-    }
-    .something-burger {
-        margin-left: 10px;
-        margin-top: 0px;
-    }
-    .rect {
-        height: 130px;
-        margin-top: -60px;
-    }
-    .section-2-1 {
-        flex-direction: column;
-    }
-    .text {
-        margin: 0;
-    }
-    .section-2-1 > img {
-        width: 100%;
+    :root {
+        --content-width: 90%;
+        --navbar-menu-width: 40%;
+        --sections-direction: column;
+        --profile-main-img: 35%;
+        --profile-side-img: 28%;
+        --section-1-margins: 0px 0 50px 0;
+        --something-burger-margins: 0 0 0 0;
+        --section-1-gap: 30px;
+        --rect-height: 130px;
+        --rect-margin-top: -60px;
+        --section-2-padding: 0;
+        --text-side-width: 100%;
+        --image-side-width: 100%;
     }
 }
 @media (max-width: 768px) {
